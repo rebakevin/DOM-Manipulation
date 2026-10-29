@@ -1,4 +1,7 @@
 function filterEmployees(list) {
-  // TODO: filter list by state.search (name) and state.role together
-  return list;
+  return list.filter((emp) => {
+    const matchesName = emp.name.toLowerCase().includes(state.search.toLowerCase());
+    const matchesRole = !state.role || emp.role === state.role;
+    return matchesName && matchesRole;
+  });
 }

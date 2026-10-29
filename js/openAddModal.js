@@ -1,6 +1,10 @@
 function openAddModal() {
+  // Ignore if a modal is already open
+  if (document.querySelector(".modal-overlay")) return;
+
   // Overlay + modal box, built with DOM methods
   const overlay = document.createElement("div");
+  overlay.className = "modal-overlay";
   overlay.style.cssText =
     "position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;";
 
@@ -21,8 +25,15 @@ function openAddModal() {
   overlay.appendChild(modal);
   document.body.appendChild(overlay);
 
-  // Closing: Cancel button, or clicking outside the box
-  const close = () => overlay.remove();
+  // Closing: Cancel button, clicking outside the box, or Escape
+  const close = () => {
+    overlay.remove();
+    document.removeEventListener("keydown", onKey);
+  };
+  const onKey = (e) => {
+    if (e.key === "Escape") close();
+  };
+  document.addEventListener("keydown", onKey);
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) close();
   });

@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #f4f5f7;
+    margin: 0;
+    color: #222;
+}
+
+.dashboard {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.controls input {
+    flex: 1;
+}
+
+input, select, button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+th, td {
+    padding: 0.6rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th[data-sort] {
+    cursor: pointer;
+    user-select: none;
+}
+
+.row-green {
+    background: #d4f5d4;
+}
+
+.row-yellow {
+    background: #fff6c2;
+}
+
+.row-red {
+    background: #f9d0d0;
+}
+
+.summary-card {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.modal-error {
+    color: #c00;
+    font-size: 0.9rem;
+}

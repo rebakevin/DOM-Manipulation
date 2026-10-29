@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsightFlow Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="dashboard">
+    <h1>InsightFlow – Employee Performance</h1>
+
+    <section class="controls">
+      <input type="text" id="search" placeholder="Search by name...">
+      <select id="role-filter"></select>
+      <button id="add-btn">Add Employee</button>
+    </section>
+
+    <!-- Table is generated entirely by JS (renderTable) -->
+    <section id="table-container"></section>
+
+    <!-- Filled by JS (updateSummary) -->
+    <section id="summary"></section>
+  </main>
+
+  <!-- Order matters: data first, features next, main last -->
+  <script src="js/data.js"></script>
+  <script src="js/renderTable.js"></script>
+  <script src="js/sortEmployees.js"></script>
+  <script src="js/filterEmployees.js"></script>
+  <script src="js/openEditModal.js"></script>
+  <script src="js/openAddModal.js"></script>
+  <script src="js/updateSummary.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,8 +1,10 @@
 # InsightFlow Dashboard
+**Deployed link:** https://rebakevin.github.io/DOM-Manipulation/
 
 Vanilla JS employee dashboard. Everything is already wired up: open `index.html` in a browser.
 Each person edits **only their own file** in `js/` and fills in the function. Add your own helper code inside your file if needed.
 
+### Tasks
 | Person | File | Function(s) |
 |--------|------|-------------|
 | 1 | `js/renderTable.js` | `renderTable(list)` – table, buttons, row colors |
